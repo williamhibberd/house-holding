@@ -1,81 +1,41 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+<Layout title="The House Group">
+	<main
+		class="h-screen w-full bg-black text-white flex items-center justify-center p-4 md:p-8"
+	>
+		<section class="text-center">
+			<header class="space-y-10 md:space-y-12 pb-6 md:pb-8">
+				<h1 class="sr-only" hidden>House</h1>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="fill-current w-40 md:w-60 max-w-2/3 mx-auto"
+					viewBox="0 0 96 64"
+				>
+					<path
+						d="M0 28.2207h5.05275v15.1179h5.05275V28.2207h5.0527v35.2756h-5.0527V48.3784H5.05275v15.1179H0V28.2207Zm20.2104-7.055c0-1.3774.3366-2.6459 1.0106-3.8045.6734-1.1593 1.5917-2.0743 2.7537-2.7468 1.162-.6714 2.4334-1.0079 3.8149-1.0079 1.3807 0 2.6526.3365 3.8146 1.0079 1.1623.6726 2.0794 1.5876 2.7538 2.7468.6734 1.1586 1.0106 2.4272 1.0106 3.8045v35.2756c0 1.378-.3372 2.6454-1.0106 3.8046-.6744 1.1592-1.5915 2.0748-2.7538 2.7462C30.4422 63.664 29.1703 64 27.7896 64c-1.3815 0-2.6529-.336-3.8149-1.0079-1.162-.6714-2.0803-1.587-2.7537-2.7462-.6741-1.1593-1.0106-2.4266-1.0106-3.8046V21.1657Zm5.0527 35.2756c0 .4709.109.8992.3284 1.285.2187.3864.522.689.9095.9071.3871.2187.8166.3275 1.2886.3275.4712 0 .9007-.1088 1.2884-.3275.3868-.2181.6899-.5207.9095-.9071.2187-.3858.3284-.8141.3284-1.285V21.1657c0-.4703-.1097-.8986-.3284-1.285-.2196-.3858-.5227-.6883-.9095-.9071-.3877-.2181-.8172-.3275-1.2884-.3275-.472 0-.9015.1094-1.2886.3275-.3875.2188-.6908.5213-.9095.9071-.2194.3864-.3284.8148-.3284 1.285v35.2756ZM48 64c-1.3816 0-2.6529-.336-3.8149-1.0079-1.162-.6714-2.0803-1.587-2.7538-2.7462-.674-1.1593-1.0106-2.4266-1.0106-3.8046V0h5.0528v56.4413c0 .4708.109.8992.3283 1.2849.2187.3865.5221.689.9095.9071.3871.2188.8166.3275 1.2887.3275.4712 0 .9006-.1087 1.2884-.3275.3868-.2181.6899-.5206.9095-.9071.2187-.3857.3283-.8141.3283-1.2849V0h5.0528v56.4413c0 1.3779-.3372 2.6453-1.0106 3.8045-.6744 1.1592-1.5915 2.0748-2.7538 2.7462C50.6526 63.664 49.3806 64 48 64Zm20.2107 0c-1.3816 0-2.6529-.336-3.8149-1.0079-1.162-.6714-2.0804-1.587-2.7538-2.7462-.6741-1.1593-1.0106-2.4266-1.0106-3.8046v-7.0556h5.0527v7.0556c0 .4368.1176.8488.3537 1.2346.2354.3864.5473.6975.9347.932.3868.2357.7998.353 1.2382.353.4374 0 .8501-.1173 1.2378-.353.3868-.2346.6987-.5456.9348-.932.2351-.3858.3536-.7977.3536-1.2346v-6.6522c0-1.3105-.1602-2.4691-.48-3.4771-.3205-1.0079-.7578-1.898-1.3137-2.6708-.5559-.7729-1.339-1.7468-2.3496-2.923-.0338-.0328-.0506-.0583-.0506-.0753 0-.017-.0173-.042-.0506-.076-.0338-.0328-.0679-.0668-.1008-.1008-.0341-.0328-.0679-.0669-.1011-.1009-1.1455-1.2759-2.1056-2.4606-2.8801-3.5524-.7752-1.0912-1.4322-2.3853-1.9704-3.8805-.5394-1.4946-.8087-3.2001-.8087-5.1151v-6.6516c0-1.3773.3366-2.6459 1.0106-3.8045.6735-1.1592 1.5918-2.0742 2.7538-2.7468 1.162-.6713 2.4333-1.0079 3.8149-1.0079 1.3807 0 2.6526.3366 3.8146 1.0079 1.1623.6726 2.0794 1.5876 2.7538 2.7468.6734 1.1586 1.0106 2.4272 1.0106 3.8045v7.055h-5.0528v-7.055c0-.4362-.1184-.8481-.3536-1.2346-.236-.3858-.5479-.6968-.9348-.9326-.3877-.2345-.8004-.3523-1.2378-.3523-.4383 0-.8513.1179-1.2381.3523-.3875.2358-.6994.5468-.9348.9326-.236.3865-.3536.7984-.3536 1.2346v6.6516c0 1.2777.1596 2.4278.48 3.4522.3198 1.0249.7578 1.9235 1.3137 2.6963.5559.7728 1.3389 1.7468 2.3495 2.9224.0332.034.0506.0596.0506.076 0 .017.0165.0425.0506.0753.0332.0341.067.0681.1011.1009.0329.034.067.0674.1008.1008 1.1449 1.2771 2.105 2.4528 2.8802 3.5275.7745 1.0754 1.4312 2.3604 1.9707 3.855.5382 1.4952.8083 3.2177.8083 5.1655v6.6522c0 1.3779-.3371 2.6453-1.0106 3.8045-.6743 1.1592-1.5914 2.0748-2.7537 2.7462-1.162.672-2.434 1.008-3.8146 1.008Zm12.6311-35.7793H96v5.0391H85.8945v10.0788H96v5.0398H85.8945v10.0782H96v5.0397H80.8418V28.2207Z"
+					></path>
+				</svg>
+				<h2 class="font-serif text-2xl md:text-4xl tracking-wide">
+					Website Coming Soon
+				</h2>
+			</header>
+			<p class="text-lg">
+				You can see the properties we're currently marketing for sale by
+				<a
+					class="underline hover:opacity-75 transition-opacity"
+					target="_blank"
+					href="https://www.rightmove.co.uk/property-for-sale/find.html?includeSSTC=true&locationIdentifier=BRANCH%5E258710"
+					>clicking here</a
+				><br />
+				Call us on <a
+					href="tel:01672556194"
+					class="underline hover:opacity-75 transition-opacity"
+					>01672556194</a
+				>
+			</p>
+		</section>
 	</main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
